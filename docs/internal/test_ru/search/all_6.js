@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['iasyncop',['IAsyncOp',['../interface_vdev_1_1_async_1_1_i_async_op.html',1,'Vdev::Async']]],
-  ['iasyncop_3c_20vdev_3a_3anothing_20_3e',['IAsyncOp&lt; Vdev::Nothing &gt;',['../interface_vdev_1_1_async_1_1_i_async_op.html',1,'Vdev::Async']]],
-  ['iasyncopbase',['IAsyncOpBase',['../interface_vdev_1_1_async_1_1_i_async_op_base.html',1,'Vdev::Async']]],
-  ['iexecutionstateholder',['IExecutionStateHolder',['../interface_vdev_1_1_async_1_1_i_execution_state_holder.html',1,'Vdev::Async']]],
-  ['imessagedescriptor',['IMessageDescriptor',['../interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html',1,'Vdev::Messaging::MessagesHub']]]
+  ['handlerrequirement',['HandlerRequirement',['../class_vdev_1_1_messaging_1_1_message_description_attribute.html#aa18918345769ed7d94cb6fa7518e45db',1,'Vdev.Messaging.MessageDescriptionAttribute.HandlerRequirement()'],['../namespace_vdev_1_1_messaging.html#a7abfb28cae6745583d23a4b312f61486',1,'Vdev.Messaging.HandlerRequirement()']]],
+  ['hub',['Hub',['../class_vdev_1_1_messaging_1_1_messages_utils.html#aaac83ac2e7db1c2c9df09561f4b872cb',1,'Vdev::Messaging::MessagesUtils']]]
 ];

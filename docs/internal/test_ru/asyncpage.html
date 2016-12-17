@@ -87,14 +87,18 @@ $(document).ready(function(){initNavTree('asyncpage.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#asyncpage1">Обзор                         </a></li>
-<li class="level1"><a href="#section1">Header1                           </a></li>
-<li class="level1"><a href="#section2">Header2                     </a></li>
+<ul><li class="level1"><a href="#asynreview">Обзор                         </a></li>
+<li class="level1"><a href="#asyncsequence">Исполнение                  </a></li>
+<li class="level1"><a href="#asyncmainclasses">Основные классы                 </a></li>
+<li class="level1"><a href="#asyncconstruction">Создание операций                           </a></li>
+<li class="level1"><a href="#asyncdebug">Обработка ошибок/отладка                     </a></li>
+<li class="level1"><a href="#asynccompose">Композиция операций            </a></li>
+<li class="level1"><a href="#asynccancelation">Отмена операции (cancelation).                            </a></li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="asyncpage1"></a>
+<div class="textblock"><h1><a class="anchor" id="asynreview"></a>
 Обзор                         </h1>
-<pre class="fragment">Асинхронные операции предлагают альтернативу Unity coroutine.
+<pre class="fragment">Асинхронные операции - альтернатива Unity coroutine.
 </pre><h2>Отличия <a class="el" href="namespace_vdev_1_1_async.html">Vdev.Async</a> и Unity coroutines:</h2>
 <ul>
 <li>возврат результата;</li>
@@ -103,30 +107,96 @@ $(document).ready(function(){initNavTree('asyncpage.html','');});
 <li>комбинирование/композиция операций ;</li>
 <li>синхронизация операций исполняющихся в разных потоках;</li>
 <li>"переиспользование" операций : возможность вызывать "await" для уже завершённой операции (кэширование операции, а не самого результата);</li>
-<li>возможность одновременного использования одной операции в нескольких точках синзронизации (ожидать завершения операции могут одновременно несколько "дочерних" операций);</li>
+<li>возможность одновременного использования одной операции в нескольких await'ах (у одной операции может быть больше одного "ожидающего родителя");</li>
 </ul>
+<h1><a class="anchor" id="asyncsequence"></a>
+Исполнение                  </h1>
+<p>Асинхроннонная последовательность представлена как IEnumerator&lt;<a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">Vdev.Async.YieldOp</a>&gt;.</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div><div class="line"></div><div class="line"><span class="keyword">using</span> <a class="code" href="namespace_vdev.html">Vdev</a>.<a class="code" href="namespace_vdev_1_1_async.html">Async</a>;</div><div class="line"></div><div class="line"><span class="comment">// ...</span></div><div class="line"></div><div class="line">IEnumerator&lt;YieldOp&gt; Job_Async()</div><div class="line">{</div><div class="line">    <span class="keywordflow">while</span> (!isJobDone)</div><div class="line">    {</div><div class="line">        yield <span class="keywordflow">return</span> YieldOp.Continue;</div><div class="line">    }</div><div class="line"></div><div class="line">    var childTask = SpawnChildTask();</div><div class="line"></div><div class="line">    yield <span class="keywordflow">return</span> YieldOp.Wait(childTask);</div><div class="line"></div><div class="line">    yield <span class="keywordflow">return</span> YieldOp.Result(MakeResult(childTask.Result));</div><div class="line">}</div></div><!-- fragment --><p>Всё исполнение происходит в контексте <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">процессора асинхронных операций</a>. При создании каждая задача должна быть связана с одним из процессоров и в случае если процессор не указан явно то будет использован процессор по-умолчанию:</p>
+<ul>
+<li>если задача создаётся в контексте другой задачи, то "дочерняя"(новая) задача унаследует процессор "продителя";</li>
+<li>противном случае используется <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a088df92b1a29c1474864b8bdaf00b8eb">глобальная настройка</a>;</li>
+</ul>
+<h1><a class="anchor" id="asyncmainclasses"></a>
+Основные классы                 </h1>
 <h2>IAsyncOp&lt;R&gt;</h2>
-<p>Асинхронная операция представленна классом <a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">Vdev.Async.IAsyncOp</a>&lt;R "IAsyncOp&lt;R&gt;". В качестве generic параметра тип возвращаемого операцией значения. Если операция не возвращает значения, то должен быть использован <a class="el" href="struct_vdev_1_1_nothing.html">Nothing</a>.</p>
-<p><a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">Асинхронная опреация</a> немного текста</p>
-<p><a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">Vdev.Async.IAsyncOp</a>&lt;R "Асинхронная опреация &lt;R&gt;" немного текста 2</p>
-<p><a href="#section1">Ref to h1</a></p>
-<p>Doxygen can process files with Markdown formatting. For this to work the extension for such a file should be .md or .markdown (see EXTENSION_MAPPING if your Markdown files have a different extension, and use md as the name of the parser). Each file is converted to a page (see the page command for details).</p>
-<p>By default the name and title of the page are derived from the file name. If the file starts with a level 1 header however, it is used as the title of the page. If you specify a label for the header (as shown in Header Id Attributes) doxygen will use that as the page name.</p>
-<p>If the label is called index or mainpage doxygen will put the documentation on the front page (index.html).</p>
-<p>Here is an example of a file README.md that will appear as the main page when processed by doxygen:</p>
-<h1><a class="anchor" id="section1"></a>
-Header1                           </h1>
-<p><a href="#section2">Ref to h2</a></p>
-<p>Doxygen can process files with Markdown formatting. For this to work the extension for such a file should be .md or .markdown (see EXTENSION_MAPPING if your Markdown files have a different extension, and use md as the name of the parser). Each file is converted to a page (see the page command for details).</p>
-<p>By default the name and title of the page are derived from the file name. If the file starts with a level 1 header however, it is used as the title of the page. If you specify a label for the header (as shown in Header Id Attributes) doxygen will use that as the page name.</p>
-<p>If the label is called index or mainpage doxygen will put the documentation on the front page (index.html).</p>
-<p>Here is an example of a file README.md that will appear as the main page when processed by doxygen:</p>
-<h1><a class="anchor" id="section2"></a>
-Header2                     </h1>
-<p>Doxygen can process files with Markdown formatting. For this to work the extension for such a file should be .md or .markdown (see EXTENSION_MAPPING if your Markdown files have a different extension, and use md as the name of the parser). Each file is converted to a page (see the page command for details).</p>
-<p>By default the name and title of the page are derived from the file name. If the file starts with a level 1 header however, it is used as the title of the page. If you specify a label for the header (as shown in Header Id Attributes) doxygen will use that as the page name.</p>
-<p>If the label is called index or mainpage doxygen will put the documentation on the front page (index.html).</p>
-<p>Here is an example of a file README.md that will appear as the main page when processed by doxygen: </p>
+<p>Асинхронная операция представленна классом <a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html" title="Main interface for representing async operation. ">Vdev.Async.IAsyncOp</a>. В качестве generic параметра тип возвращаемого операцией значения. Если операция не возвращает значения, то должен быть использован <a class="el" href="struct_vdev_1_1_nothing.html">Vdev.Nothing</a> - в данном случае система позволяет не делать возврата значения (через Vdev.Async.AsyncOp.Result) из операции.</p>
+<h2>AsyncProcessor</h2>
+<p>Все операции исполняются "внутри" экземпляров <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">Vdev.Async.AsyncProcessor</a>:</p>
+<ul>
+<li>итерация по IEnumerator&lt;YieldOp&gt; ;</li>
+<li>обработка результатов полученных из "итераторов";</li>
+<li>связывание операций parent -&gt; child;</li>
+</ul>
+<p>В системе может быть сколько угодно процессоров аснихронных операций, операция исполняющаяся на одном процессоре может быть использована в контексте другого.</p>
+<div class="fragment"><div class="line">m_thread = <span class="keyword">new</span> Thread(() =&gt;</div><div class="line">{</div><div class="line">    <span class="keyword">using</span> (var processor = <span class="keyword">new</span> AsyncProcessor())</div><div class="line">    {</div><div class="line">        <span class="keywordflow">while</span> (!processor.Disposed)</div><div class="line">        {</div><div class="line">            processor.ExecuteBlocking();</div><div class="line">        }</div><div class="line">    }</div><div class="line">} );</div><div class="line"></div><div class="line"><span class="comment">// or non blocking:</span></div><div class="line"></div><div class="line">AsyncProcessor m_processor = <span class="keyword">new</span> AsyncProcessor();</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> Update()</div><div class="line">{</div><div class="line">    m_processor.ExecuteNonBlocking();</div><div class="line">}</div></div><!-- fragment --><p>Внутри Unity используется 4 <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">процессора асинхронных операций</a>:</p>
+<ul>
+<li>Main (Unity) thread non persistent;</li>
+<li>Threaded non persistent;</li>
+<li>Main (Unity) thread persistent;</li>
+<li>Threaded persistent;</li>
+</ul>
+<h2>AsyncOpSource&lt;R&gt;</h2>
+<p>Иногда возникает необходиомсть предоставить результат для асинхронной операции полученный иным путём нежели через <a class="el" href="asyncpage.html#asyncsequence">последовательность исполнения</a>. Для этого должен быть использован Async.Vdev.AsyncOpSource:</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespace_vdev.html">Vdev</a>.<a class="code" href="namespace_vdev_1_1_async.html">Async</a>;</div><div class="line"><span class="comment">// ...</span></div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> PerformOperationWithNotification(Action&lt;string&gt; callback) {<span class="comment">/*...*/</span>}</div><div class="line"></div><div class="line"></div><div class="line">IAsyncOp&lt;string&gt; GetResultAsync(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div><div class="line">{</div><div class="line">    AsyncOpSource&lt;string&gt; opSource = <span class="keyword">new</span> AsyncOpSource(null); <span class="comment">// this is not the same as new AsyncOpSource(); !!!</span></div><div class="line"></div><div class="line">    PerformOperationWithNotification(callbackResult =&gt;</div><div class="line">    {</div><div class="line">        opSource.SetResult(callbackResult));</div><div class="line">        <span class="comment">// or opSource.SetException(new Exception()); // if error occured</span></div><div class="line">    });</div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> opSource.Op;</div><div class="line">}</div></div><!-- fragment --><p>Перед использованием объект AsyncOpSource должен быть привязан к процессору либо через вызов <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a8d83c002b81bb184f78d98c9467492f0">BindToProcessor</a> либо через указание процессора в конструкторе.</p>
+<h2>AsyncFactory</h2>
+<p>Набор функционала для создания экземпляров задач. Класс <a class="el" href="class_vdev_1_1_async_1_1_async_factory.html" title="Facilities to create operations. ">Vdev.Async.AsyncFactory</a>. См <a class="el" href="asyncpage.html#asyncconstruction">так же</a>.</p>
+<h1><a class="anchor" id="asyncconstruction"></a>
+Создание операций                           </h1>
+<p>Основная реализация <a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">IAsyncOp</a> представлена классов <a class="el" href="class_vdev_1_1_async_1_1_async_op.html">AsyncOp</a>. Так что создание операции всегда сводится к конструированию экземпляра <a class="el" href="class_vdev_1_1_async_1_1_async_op.html">AsyncOp</a>, После того как операция создана она должна быть запущена через вызов <a class="el" href="class_vdev_1_1_async_1_1_async_op.html#a740e6ba026b1d34d10a19fa952230868">Start</a>.</p>
+<p>Система использует умолчание, что все операции которые возвращаются пользователю уже запущены. Для упрощения операции конструирования используются методы класса <a class="el" href="class_vdev_1_1_async_1_1_async_factory.html">AsyncFactory</a>:</p>
+<ul>
+<li>StartNew: создаёт операцию позволяя "настроить" аспекты запуска: опции, процессор;</li>
+<li>Run: создаёт операцию с параметрами по-умолчанию, запуская её на процессоре по - умолчанию;</li>
+</ul>
+<h1><a class="anchor" id="asyncdebug"></a>
+Обработка ошибок/отладка                     </h1>
+<h2>Основное</h2>
+<p>Все необработанные исключения возникающие в ходе исполнения асинхронной операции перехватываются внутри процессора (внутри метода <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a1cfd66aed18f99b9ae59922c125381cf">Execute</a>). Можно указать <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a73357cffb742f739e935ccce2e11b61f">обработчик-делегат</a> для перехвата таких исключений:</p>
+<div class="fragment"><div class="line">AsyncProcessor.ExceptionHandler = (exception, execTracing) =&gt;</div><div class="line">{</div><div class="line">    ThreadDispatcher.Instance.InvokeInMainThread(() =&gt;</div><div class="line">    {</div><div class="line">        Debug.LogWarning(<span class="stringliteral">&quot;Async exception occur:&quot;</span>);</div><div class="line">        Debug.LogException(exception);</div><div class="line">    } );</div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> AsyncProcessor.ExceptionHandlerResult.Nothing;</div><div class="line">};</div></div><!-- fragment --><h2>Дополнительные инструменты в Unity.</h2>
+<p>Внутри Unity - редактора открывается утилита для инспектирования ошибки:</p>
+<div class="image">
+<img src="AsyncTraceViewer.png" alt="AsyncTraceViewer.png"/>
+<div class="caption">
+Trace viewer</div></div>
+<p> Инструмент отображает:</p><ul>
+<li>информацию об исключении: тип, сообщение, callstack;</li>
+<li>информацию об операции: тип, callstack конструирования операции (для идентификации места где операция была создана);</li>
+<li>рекурсивно информация о "родительской" задаче ;</li>
+</ul>
+<p>Таким образом можно отследить полный "путь" исполнения до места возникновения необработанного исключения.</p>
+<h1><a class="anchor" id="asynccompose"></a>
+Композиция операций            </h1>
+<p>Механизм extension-методов позволяет объеденить несколько операций в одну. Плюс возможно создать последовательность исполнения без определения дополнительных методов.</p>
+<h2>Пример.</h2>
+<h3>Вычисление с использованием функции, определяющей последовательность операций:</h3>
+<div class="fragment"><div class="line"><span class="comment">// define execution sequence by function</span></div><div class="line">IEnumerator&lt;YieldOp&gt; Transform_Async()</div><div class="line">{</div><div class="line">    var task = SpawnTask();</div><div class="line"></div><div class="line">    yield <span class="keywordflow">return</span> YieldOp.Wait(task);</div><div class="line"></div><div class="line">    yield <span class="keywordflow">return</span> YieldOp.Result(task.ToString()); </div><div class="line">}</div></div><!-- fragment --><h3>Вычисление с использованием extension методов (композиция):</h3>
+<div class="fragment"><div class="line"><span class="comment">// define &quot;composit operation&quot;</span></div><div class="line">IEnumerator&lt;YieldOp&gt; Transform_Async&lt;Input, Output&gt;(IAsyncOp&lt;Input&gt; op, Func&lt;Input, Output&gt; mapper)</div><div class="line">{</div><div class="line">    var task = SpawnTask();</div><div class="line"></div><div class="line">    yield <span class="keywordflow">return</span> YieldOp.Wait(task);</div><div class="line"></div><div class="line">    var result = mapper(task.Result);</div><div class="line"></div><div class="line">    yield <span class="keywordflow">return</span> YieldOp.Result(result);</div><div class="line">}</div><div class="line"></div><div class="line">IAsyncOp&lt;Output&gt; Transform&lt;Input, Output&gt;(<span class="keyword">this</span> IAsyncOp&lt;Input&gt; op, Func&lt;Input, Output&gt; mapper)</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span> AsyncFactory.Run&lt;Output&gt;(Transform_Async(op, mapper));</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">//use composition:  once defined Transform &quot;operator&quot; can be used everywhere.</span></div><div class="line"></div><div class="line">IAsyncOp&lt;string&gt; PerformOperation()</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span></div><div class="line">        SpawnTask()</div><div class="line">        .Transform(res =&gt; res.ToString());</div><div class="line">}</div><div class="line"></div><div class="line">IAsyncOp&lt;int&gt; PerformMoreOperations()</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span></div><div class="line">        SpawnTaskReturnString()</div><div class="line">        .Transform(str =&gt; Int.Parse(str));</div><div class="line">}</div></div><!-- fragment --><p>Система предлагает ряд <a class="el" href="class_vdev_1_1_async_1_1_async_default_extensions.html">предопределённых extension</a> - методов композиции операций.</p>
+<table class="doxtable">
+<tr>
+<th>Операция/метод</th><th>Описание  </th></tr>
+<tr>
+<td>Do </td><td>DO </td></tr>
+<tr>
+<td>Chain </td><td>CHAIN </td></tr>
+<tr>
+<td>ChainAsync </td><td>CHAINASYNC </td></tr>
+<tr>
+<td>Sum/Fold </td><td>Sum </td></tr>
+<tr>
+<td>Merge </td><td>MERGE </td></tr>
+<tr>
+<td>Finally </td><td>FINALLY </td></tr>
+</table>
+<h1><a class="anchor" id="asynccancelation"></a>
+Отмена операции (cancelation).                            </h1>
+<p>Основные механизмы позволяющие отменить операцию:</p>
+<ul>
+<li>timeout;</li>
+<li><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">cancelation</a>;</li>
+</ul>
+<h2>Cancelation</h2>
+<p>Система предлагает использовать класс <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancelation</a>. Объект cancelation должен быть получен через <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html">CancelationSource</a>. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

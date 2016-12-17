@@ -110,23 +110,28 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a33735d5622b778088ab6d75179516184"><td class="memItemLeft" align="right" valign="top"><a id="a33735d5622b778088ab6d75179516184"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
+<tr class="memitem:aee7fc614d8cdc51e2086ee6ac7feecd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#aee7fc614d8cdc51e2086ee6ac7feecd9">AsyncProcessor</a> ()</td></tr>
+<tr class="memdesc:aee7fc614d8cdc51e2086ee6ac7feecd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct processor object.  <a href="#aee7fc614d8cdc51e2086ee6ac7feecd9">More...</a><br /></td></tr>
+<tr class="separator:aee7fc614d8cdc51e2086ee6ac7feecd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33735d5622b778088ab6d75179516184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a33735d5622b778088ab6d75179516184">Dispose</a> ()</td></tr>
 <tr class="separator:a33735d5622b778088ab6d75179516184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a065c37cdc0515f01b0699ebed3a1534a"><td class="memItemLeft" align="right" valign="top"><a id="a065c37cdc0515f01b0699ebed3a1534a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ExecuteNonBlocking</b> ()</td></tr>
+<tr class="memitem:a1cfd66aed18f99b9ae59922c125381cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a1cfd66aed18f99b9ae59922c125381cf">Execute</a> (TimeSpan waitTimeout)</td></tr>
+<tr class="memdesc:a1cfd66aed18f99b9ae59922c125381cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all pending operations. If processor disposed Execution will be returned immediately and any other attempt to call Execute will cause ObjectDisposedException  <a href="#a1cfd66aed18f99b9ae59922c125381cf">More...</a><br /></td></tr>
+<tr class="separator:a1cfd66aed18f99b9ae59922c125381cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065c37cdc0515f01b0699ebed3a1534a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a065c37cdc0515f01b0699ebed3a1534a">ExecuteNonBlocking</a> ()</td></tr>
+<tr class="memdesc:a065c37cdc0515f01b0699ebed3a1534a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all operations in non blocking mode, so if there is no operations ExecuteNonBlocking returns immediately. Same as <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a1cfd66aed18f99b9ae59922c125381cf">Execute</a>(TimeSpan.Zero);  <a href="#a065c37cdc0515f01b0699ebed3a1534a">More...</a><br /></td></tr>
 <tr class="separator:a065c37cdc0515f01b0699ebed3a1534a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b259fabc47b943e17b028f3329586e"><td class="memItemLeft" align="right" valign="top"><a id="a14b259fabc47b943e17b028f3329586e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ExecuteBlocking</b> ()</td></tr>
+<tr class="memitem:a14b259fabc47b943e17b028f3329586e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a14b259fabc47b943e17b028f3329586e">ExecuteBlocking</a> ()</td></tr>
+<tr class="memdesc:a14b259fabc47b943e17b028f3329586e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute blocking mode, so processor will wait for any pending operation infinitely (or while processor will be disposed). Same as <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a1cfd66aed18f99b9ae59922c125381cf">Execute</a>(TimeSpan.MaxValue);  <a href="#a14b259fabc47b943e17b028f3329586e">More...</a><br /></td></tr>
 <tr class="separator:a14b259fabc47b943e17b028f3329586e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4dd69d0610419fe668aecb39dbbac703"><td class="memItemLeft" align="right" valign="top"><a id="a4dd69d0610419fe668aecb39dbbac703"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDefaultProcessor</b> (<a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> processor)</td></tr>
+<tr class="memitem:a4dd69d0610419fe668aecb39dbbac703"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a4dd69d0610419fe668aecb39dbbac703">SetDefaultProcessor</a> (<a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> processor)</td></tr>
+<tr class="memdesc:a4dd69d0610419fe668aecb39dbbac703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default processor.  <a href="#a4dd69d0610419fe668aecb39dbbac703">More...</a><br /></td></tr>
 <tr class="separator:a4dd69d0610419fe668aecb39dbbac703"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae43bb155f9ef6f96a6e9ca7b56de04c"><td class="memItemLeft" align="right" valign="top"><a id="aae43bb155f9ef6f96a6e9ca7b56de04c"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDefaultProcessorAccessor</b> (Func&lt; <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> &gt; processorAccessor)</td></tr>
+<tr class="memitem:aae43bb155f9ef6f96a6e9ca7b56de04c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#aae43bb155f9ef6f96a6e9ca7b56de04c">SetDefaultProcessorAccessor</a> (Func&lt; <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> &gt; processorAccessor)</td></tr>
+<tr class="memdesc:aae43bb155f9ef6f96a6e9ca7b56de04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default processor accessor  <a href="#aae43bb155f9ef6f96a6e9ca7b56de04c">More...</a><br /></td></tr>
 <tr class="separator:aae43bb155f9ef6f96a6e9ca7b56de04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -134,19 +139,319 @@ Properties</h2></td></tr>
 <tr class="memitem:a9bda2756c4369805c0f340d3a6c468a5"><td class="memItemLeft" align="right" valign="top"><a id="a9bda2756c4369805c0f340d3a6c468a5"></a>
 Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisposed</b></td></tr>
 <tr class="separator:a9bda2756c4369805c0f340d3a6c468a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e087eade523b6acaf4495d60411aaf7"><td class="memItemLeft" align="right" valign="top"><a id="a9e087eade523b6acaf4495d60411aaf7"></a>
-static Func&lt; Exception, CompoundCallStack, ExceptionHandlerResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ExceptionHandler</b><code> [get, set]</code></td></tr>
-<tr class="separator:a9e087eade523b6acaf4495d60411aaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89b2a0217e336d60bd16758e2caf251d"><td class="memItemLeft" align="right" valign="top"><a id="a89b2a0217e336d60bd16758e2caf251d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Disposed</b><code> [get]</code></td></tr>
+<tr class="memitem:a73357cffb742f739e935ccce2e11b61f"><td class="memItemLeft" align="right" valign="top">static Func&lt; Exception, <a class="el" href="class_vdev_1_1_async_1_1_execution_state_tracing.html">ExecutionStateTracing</a>, ExceptionHandlerResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a73357cffb742f739e935ccce2e11b61f">ExceptionHandler</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a73357cffb742f739e935ccce2e11b61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get or set handler of unhandled exceptions.  <a href="#a73357cffb742f739e935ccce2e11b61f">More...</a><br /></td></tr>
+<tr class="separator:a73357cffb742f739e935ccce2e11b61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b2a0217e336d60bd16758e2caf251d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a89b2a0217e336d60bd16758e2caf251d">Disposed</a><code> [get]</code></td></tr>
+<tr class="memdesc:a89b2a0217e336d60bd16758e2caf251d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that processor is disposed (by calling <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a33735d5622b778088ab6d75179516184">Dispose</a> method).  <a href="#a89b2a0217e336d60bd16758e2caf251d">More...</a><br /></td></tr>
 <tr class="separator:a89b2a0217e336d60bd16758e2caf251d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8e9028ec00eb9db04aef2db2816981f"><td class="memItemLeft" align="right" valign="top"><a id="aa8e9028ec00eb9db04aef2db2816981f"></a>
-static <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Current</b><code> [get]</code></td></tr>
+<tr class="memitem:aa8e9028ec00eb9db04aef2db2816981f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#aa8e9028ec00eb9db04aef2db2816981f">Current</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa8e9028ec00eb9db04aef2db2816981f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain reference to the current processor. Each thread can execute only one processor at once. So Current returns current processor within this thread (or null if no execution processed).  <a href="#aa8e9028ec00eb9db04aef2db2816981f">More...</a><br /></td></tr>
 <tr class="separator:aa8e9028ec00eb9db04aef2db2816981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a088df92b1a29c1474864b8bdaf00b8eb"><td class="memItemLeft" align="right" valign="top"><a id="a088df92b1a29c1474864b8bdaf00b8eb"></a>
-static <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Default</b><code> [get]</code></td></tr>
+<tr class="memitem:a088df92b1a29c1474864b8bdaf00b8eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a088df92b1a29c1474864b8bdaf00b8eb">Default</a><code> [get]</code></td></tr>
+<tr class="memdesc:a088df92b1a29c1474864b8bdaf00b8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default execution processor. Must be set through <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a4dd69d0610419fe668aecb39dbbac703">SetDefaultProcessor</a> or <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#aae43bb155f9ef6f96a6e9ca7b56de04c">SetDefaultProcessorAccessor</a>. Used as by default for each newly created operation.  <a href="#a088df92b1a29c1474864b8bdaf00b8eb">More...</a><br /></td></tr>
 <tr class="separator:a088df92b1a29c1474864b8bdaf00b8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aee7fc614d8cdc51e2086ee6ac7feecd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7fc614d8cdc51e2086ee6ac7feecd9">&sect;&nbsp;</a></span>AsyncProcessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vdev.Async.AsyncProcessor.AsyncProcessor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct processor object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a33735d5622b778088ab6d75179516184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33735d5622b778088ab6d75179516184">&sect;&nbsp;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Async.AsyncProcessor.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p></p>
+<p>Dispose processor. After Dispose is called <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a89b2a0217e336d60bd16758e2caf251d">Disposed</a> should always return null and any other operation cause ObjectDisposedException. </p>
+
+</div>
+</div>
+<a id="a1cfd66aed18f99b9ae59922c125381cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cfd66aed18f99b9ae59922c125381cf">&sect;&nbsp;</a></span>Execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Async.AsyncProcessor.Execute </td>
+          <td>(</td>
+          <td class="paramtype">TimeSpan&#160;</td>
+          <td class="paramname"><em>waitTimeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute all pending operations. If processor disposed Execution will be returned immediately and any other attempt to call Execute will cause ObjectDisposedException </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waitTimeout</td><td>Wait for pending operations.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ObjectDisposedException</td><td>If processor disposed prior of calling execute</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a14b259fabc47b943e17b028f3329586e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b259fabc47b943e17b028f3329586e">&sect;&nbsp;</a></span>ExecuteBlocking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Async.AsyncProcessor.ExecuteBlocking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute blocking mode, so processor will wait for any pending operation infinitely (or while processor will be disposed). Same as <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a1cfd66aed18f99b9ae59922c125381cf">Execute</a>(TimeSpan.MaxValue); </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ObjectDisposedException</td><td>If processor disposed prior of calling ExecuteBlocking</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a065c37cdc0515f01b0699ebed3a1534a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065c37cdc0515f01b0699ebed3a1534a">&sect;&nbsp;</a></span>ExecuteNonBlocking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Async.AsyncProcessor.ExecuteNonBlocking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute all operations in non blocking mode, so if there is no operations ExecuteNonBlocking returns immediately. Same as <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a1cfd66aed18f99b9ae59922c125381cf">Execute</a>(TimeSpan.Zero); </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ObjectDisposedException</td><td>If processor disposed prior of calling ExecuteNonBlocking</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4dd69d0610419fe668aecb39dbbac703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd69d0610419fe668aecb39dbbac703">&sect;&nbsp;</a></span>SetDefaultProcessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Vdev.Async.AsyncProcessor.SetDefaultProcessor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>&#160;</td>
+          <td class="paramname"><em>processor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set default processor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processor</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If DefaultProcessorAccessor is set.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae43bb155f9ef6f96a6e9ca7b56de04c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae43bb155f9ef6f96a6e9ca7b56de04c">&sect;&nbsp;</a></span>SetDefaultProcessorAccessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Vdev.Async.AsyncProcessor.SetDefaultProcessorAccessor </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> &gt;&#160;</td>
+          <td class="paramname"><em>processorAccessor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set default processor accessor </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processorAccessor</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If DerfaultProcessor is set.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="aa8e9028ec00eb9db04aef2db2816981f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e9028ec00eb9db04aef2db2816981f">&sect;&nbsp;</a></span>Current</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> Vdev.Async.AsyncProcessor.Current</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain reference to the current processor. Each thread can execute only one processor at once. So Current returns current processor within this thread (or null if no execution processed). </p>
+
+</div>
+</div>
+<a id="a088df92b1a29c1474864b8bdaf00b8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a088df92b1a29c1474864b8bdaf00b8eb">&sect;&nbsp;</a></span>Default</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> Vdev.Async.AsyncProcessor.Default</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default execution processor. Must be set through <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a4dd69d0610419fe668aecb39dbbac703">SetDefaultProcessor</a> or <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#aae43bb155f9ef6f96a6e9ca7b56de04c">SetDefaultProcessorAccessor</a>. Used as by default for each newly created operation. </p>
+
+</div>
+</div>
+<a id="a89b2a0217e336d60bd16758e2caf251d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b2a0217e336d60bd16758e2caf251d">&sect;&nbsp;</a></span>Disposed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vdev.Async.AsyncProcessor.Disposed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check that processor is disposed (by calling <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html#a33735d5622b778088ab6d75179516184">Dispose</a> method). </p>
+
+</div>
+</div>
+<a id="a73357cffb742f739e935ccce2e11b61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73357cffb742f739e935ccce2e11b61f">&sect;&nbsp;</a></span>ExceptionHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Func&lt;Exception, <a class="el" href="class_vdev_1_1_async_1_1_execution_state_tracing.html">ExecutionStateTracing</a>, ExceptionHandlerResult&gt; Vdev.Async.AsyncProcessor.ExceptionHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get or set handler of unhandled exceptions. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>AsyncProcessor.cs</li>
 </ul>

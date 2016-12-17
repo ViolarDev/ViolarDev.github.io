@@ -82,12 +82,16 @@ $(document).ready(function(){initNavTree('class_vdev_1_1_async_1_1_yield_op.html
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="class_vdev_1_1_async_1_1_yield_op-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Vdev.Async.YieldOp Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p> 
+<p>Represents basic yield operation (that was returned by yield return at async point)  
  <a href="class_vdev_1_1_async_1_1_yield_op.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Vdev.Async.YieldOp:</div>
@@ -100,8 +104,213 @@ Inheritance diagram for Vdev.Async.YieldOp:</div>
 <area href="class_vdev_1_1_async_1_1_wait_operation.html" alt="Vdev.Async.WaitOperation" shape="rect" coords="398,56,587,80"/>
 </map>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8fa450892ccd6416d3c99d57b2b778ef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_yield_op.html#a8fa450892ccd6416d3c99d57b2b778ef">Wait</a> (<a class="el" href="interface_vdev_1_1_async_1_1_i_async_op_base.html">IAsyncOpBase</a> asyncOp)</td></tr>
+<tr class="separator:a8fa450892ccd6416d3c99d57b2b778ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefae6f0241bca3f270d2c837d7a4a874"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_yield_op.html#aefae6f0241bca3f270d2c837d7a4a874">RunAndWait&lt; R &gt;</a> (IEnumerator&lt; <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> &gt; sequence)</td></tr>
+<tr class="separator:aefae6f0241bca3f270d2c837d7a4a874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1143a4bb64223108de14bae3d69a53"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_yield_op.html#aec1143a4bb64223108de14bae3d69a53">RunAndWait</a> (IEnumerator&lt; <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> &gt; sequence)</td></tr>
+<tr class="separator:aec1143a4bb64223108de14bae3d69a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d88c45f21d5b96e4ef9e8ba08febfb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_yield_op.html#ab1d88c45f21d5b96e4ef9e8ba08febfb">Result&lt; R &gt;</a> (R result)</td></tr>
+<tr class="memdesc:ab1d88c45f21d5b96e4ef9e8ba08febfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return result for operation. After result is returned operation going to the finished state and never be executed.  <a href="#ab1d88c45f21d5b96e4ef9e8ba08febfb">More...</a><br /></td></tr>
+<tr class="separator:ab1d88c45f21d5b96e4ef9e8ba08febfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a7ec2ee3af515c250d7350aeeb9d93989"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_yield_op.html#a7ec2ee3af515c250d7350aeeb9d93989">Continue</a><code> [get]</code></td></tr>
+<tr class="memdesc:a7ec2ee3af515c250d7350aeeb9d93989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just "continue" operation. Current execution flow will be returned to the <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>, and it will continue from this point.  <a href="#a7ec2ee3af515c250d7350aeeb9d93989">More...</a><br /></td></tr>
+<tr class="separator:a7ec2ee3af515c250d7350aeeb9d93989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"></div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Represents basic yield operation (that was returned by yield return at async point) </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab1d88c45f21d5b96e4ef9e8ba08febfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d88c45f21d5b96e4ef9e8ba08febfb">&sect;&nbsp;</a></span>Result< R >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> Vdev.Async.YieldOp.Result&lt; R &gt; </td>
+          <td>(</td>
+          <td class="paramtype">R&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return result for operation. After result is returned operation going to the finished state and never be executed. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Result type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>Result of the operation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Yield operation for <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a></dd></dl>
+
+</div>
+</div>
+<a id="aec1143a4bb64223108de14bae3d69a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1143a4bb64223108de14bae3d69a53">&sect;&nbsp;</a></span>RunAndWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> Vdev.Async.YieldOp.RunAndWait </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerator&lt; <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> &gt;&#160;</td>
+          <td class="paramname"><em>sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequence</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Yield operation for <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a></dd></dl>
+
+</div>
+</div>
+<a id="aefae6f0241bca3f270d2c837d7a4a874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefae6f0241bca3f270d2c837d7a4a874">&sect;&nbsp;</a></span>RunAndWait< R >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html#aec1143a4bb64223108de14bae3d69a53">Vdev.Async.YieldOp.RunAndWait</a>&lt; R &gt; </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerator&lt; <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> &gt;&#160;</td>
+          <td class="paramname"><em>sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequence</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Yield operation for <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a></dd></dl>
+
+</div>
+</div>
+<a id="a8fa450892ccd6416d3c99d57b2b778ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa450892ccd6416d3c99d57b2b778ef">&sect;&nbsp;</a></span>Wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> Vdev.Async.YieldOp.Wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_vdev_1_1_async_1_1_i_async_op_base.html">IAsyncOpBase</a>&#160;</td>
+          <td class="paramname"><em>asyncOp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asyncOp</td><td>Child operation that must be awaited. When asyncOp is finished execution will be continued from this point. Child operation must be started.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>If asyncOp is null</td></tr>
+    <tr><td class="paramname">InvalidOperationException</td><td>If asyncOp is not started</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a7ec2ee3af515c250d7350aeeb9d93989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec2ee3af515c250d7350aeeb9d93989">&sect;&nbsp;</a></span>Continue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vdev_1_1_async_1_1_yield_op.html">YieldOp</a> Vdev.Async.YieldOp.Continue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Just "continue" operation. Current execution flow will be returned to the <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>, and it will continue from this point. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>YieldOp.cs</li>
 </ul>
 </div><!-- contents -->

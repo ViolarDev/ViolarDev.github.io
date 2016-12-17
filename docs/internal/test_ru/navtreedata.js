@@ -2,16 +2,22 @@ var NAVTREE =
 [
   [ "Unity RT Libraries", "index.html", [
     [ "Unity runtime libraries", "index.html", [
+      [ "Распространение                     ", "index.html#distribution_info", null ],
       [ "Асинхронные операции (Async)               ", "index.html#async_brief", null ],
-      [ "Сообщения (messaging)                ", "index.html#messaginh_brief", null ]
+      [ "Сообщения (messaging)                ", "index.html#messaging_brief", null ]
     ] ],
     [ "Асинхронные операции (Async)", "asyncpage.html", [
-      [ "Обзор                         ", "asyncpage.html#asyncpage1", null ],
-      [ "Header1                           ", "asyncpage.html#section1", null ],
-      [ "Header2                     ", "asyncpage.html#section2", null ]
+      [ "Обзор                         ", "asyncpage.html#asynreview", null ],
+      [ "Исполнение                  ", "asyncpage.html#asyncsequence", null ],
+      [ "Основные классы                 ", "asyncpage.html#asyncmainclasses", null ],
+      [ "Создание операций                           ", "asyncpage.html#asyncconstruction", null ],
+      [ "Обработка ошибок/отладка                     ", "asyncpage.html#asyncdebug", null ],
+      [ "Композиция операций            ", "asyncpage.html#asynccompose", null ],
+      [ "Отмена операции (cancelation).                            ", "asyncpage.html#asynccancelation", null ]
     ] ],
     [ "Messagig workflow", "messagingpage.html", [
-      [ "Hub           ", "messagingpage.html#messaging_hub", null ],
+      [ "Обзор                     ", "messagingpage.html#messagingreview", null ],
+      [ "Подписка           ", "messagingpage.html#messagingsubscription", null ],
       [ "Message     ", "messagingpage.html#messaging_message", null ]
     ] ],
     [ "Packages", null, [
@@ -36,7 +42,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"class_vdev_1_1_threads_1_1_thread_wrapper.html#a5481379908b621eab22de32a2cb5ed27"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

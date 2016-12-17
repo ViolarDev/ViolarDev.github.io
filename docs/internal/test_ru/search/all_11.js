@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['Асинхронные_20операции_20_28async_29',['Асинхронные операции (Async)',['../asyncpage.html',1,'']]]
+  ['wait',['Wait',['../class_vdev_1_1_async_1_1_yield_op.html#a8fa450892ccd6416d3c99d57b2b778ef',1,'Vdev::Async::YieldOp']]],
+  ['waitoperation',['WaitOperation',['../class_vdev_1_1_async_1_1_wait_operation.html',1,'Vdev::Async']]]
 ];

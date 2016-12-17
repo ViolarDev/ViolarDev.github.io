@@ -87,16 +87,25 @@ $(document).ready(function(){initNavTree('messagingpage.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#messaging_hub">Hub           </a></li>
+<ul><li class="level1"><a href="#messagingreview">Обзор                     </a></li>
+<li class="level1"><a href="#messagingsubscription">Подписка           </a></li>
 <li class="level1"><a href="#messaging_message">Message     </a></li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="messaging_hub"></a>
-Hub           </h1>
-<p>Here is a page that discusses these issues (including the one from your comment): svenax.net/site/2013/07/…. The only thing that is not mentioned is that not labelling ALL of the sections including the topmost header (except the page name) causes none of them to show up at all, not just in the TOC, but on the page itself. – Mad Physicist Sep 18 '14 at 18:58</p>
-<h1><a class="anchor" id="messaging_message"></a>
+<div class="textblock"><h1><a class="anchor" id="messagingreview"></a>
+Обзор                     </h1>
+<p>Система сообщений предоставляет реализацию широковещательных оповещений. Передача данных от "вещателя" (broadcaster) к "подписчикам" (subscribers) осуществляется через экземпляры класса <a class="el" href="class_vdev_1_1_messaging_1_1_messages_hub.html">MessagesHub</a>. "Подписка" осуществляется через метод Subscribe, отправка сообщения через [Broadcast]()<a class="el" href="class_vdev_1_1_messaging_1_1_messages_hub.html#a8bc4019c06577bdcb8577f4ad88c3718">Vdev.Messaging.MessagesHub.Broadcast</a>). В один момент времени в системе может быть сколько угодно экземпляров MessagesHub - ои будут работать в полной изоляции: нет возможности чтобы подписчики одного hub'а получили сообщение отправленное через другой.</p>
+<h1><a class="anchor" id="messagingsubscription"></a>
+Подписка           </h1>
+<p>На данный момент реализовано два мехнизма подписки на события:</p>
+<ul>
+<li>ручной: через непосредственное указание обработчика сообщения через вызов статического метода <b>Subscribe</b> конректного типа сообщения;</li>
+<li>автоматический: если метод класса должен быть обработчиком сообщения, то он должен быть помечен аттрибутом <a class="el" href="class_vdev_1_1_messaging_1_1_message_handler_attribute.html">MessageHandlerAttribute</a> и последующей [автоматической подпиской]((<a class="el" href="class_vdev_1_1_messaging_1_1_messages_utils.html#a752cb0d65376f0c1ed33db17afd676de">Vdev.Messaging.MessagesUtils.AutoSubscribe</a>).</li>
+</ul>
+<h2>Ручная подписка.</h2>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespace_vdev.html">Vdev</a>.<a class="code" href="namespace_vdev_1_1_messaging.html">Messaging</a>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// int - parameter of the message.</span></div><div class="line"><span class="keyword">class </span>MyMessage : Message&lt;MyMessage, int&gt;</div><div class="line">{}</div><div class="line"></div><div class="line"><span class="comment">// ...</span></div><div class="line"></div><div class="line"><span class="keywordtype">void</span> Initialize()</div><div class="line">{</div><div class="line">    <span class="comment">// subscribe</span></div><div class="line">    MyMessage.Subscribe((value)</div><div class="line">    { <span class="comment">//value of int</span></div><div class="line">    });</div><div class="line">}</div></div><!-- fragment --><h2>Автоматическая подписка.</h2>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespace_vdev.html">Vdev</a>.<a class="code" href="namespace_vdev_1_1_messaging.html">Messaging</a>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// int - parameter of the message.</span></div><div class="line"><span class="keyword">class </span>MyMessage : Message&lt;MyMessage, int&gt;</div><div class="line">{}</div><div class="line"></div><div class="line"><span class="comment">//...</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>MyClass : IDisposable</div><div class="line">{</div><div class="line">    SubscriptionInfo m_subscription;</div><div class="line"></div><div class="line">    [MessageHandler(typeof(MyMessage))]</div><div class="line">    <span class="keywordtype">void</span> HandleMessage(<span class="keywordtype">int</span> value)</div><div class="line">    {</div><div class="line">        <span class="comment">// ... handle message.</span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keywordtype">void</span> Initialize()</div><div class="line">    {</div><div class="line">        m_subscription = MessageUtils.AutoSubscribe(<span class="keyword">this</span>);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Dispose()</div><div class="line">    {</div><div class="line">        <span class="keywordflow">if</span> (m_subscription != null)</div><div class="line">        {</div><div class="line">            m_subscription.Dispose();</div><div class="line">            m_subscription = null;</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="messaging_message"></a>
 Message     </h1>
-<p>Here is a page that discusses these issues (including the one from your comment): svenax.net/site/2013/07/…. The only thing that is not mentioned is that not labelling ALL of the sections including the topmost header (except the page name) causes none of them to show up at all, not just in the TOC, but on the page itself. – Mad Physicist Sep 18 '14 at 18:58 </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

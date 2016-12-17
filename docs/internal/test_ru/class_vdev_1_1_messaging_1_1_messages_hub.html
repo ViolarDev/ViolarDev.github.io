@@ -92,23 +92,25 @@ $(document).ready(function(){initNavTree('class_vdev_1_1_messaging_1_1_messages_
 </div><!--header-->
 <div class="contents">
 
-<p> 
+<p>Messages Hub. Provide interaction beetwen subscribers and broadcasters.  
  <a href="class_vdev_1_1_messaging_1_1_messages_hub.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances of used as messages names.  <a href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_messaging_1_1_messages_hub_1_1_message_base.html">MessageBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic parameterless message.  <a href="class_vdev_1_1_messaging_1_1_messages_hub_1_1_message_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8bc4019c06577bdcb8577f4ad88c3718"><td class="memItemLeft" align="right" valign="top"><a id="a8bc4019c06577bdcb8577f4ad88c3718"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Broadcast</b> (<a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a> instance, params object[] parameters)</td></tr>
+<tr class="memitem:a8bc4019c06577bdcb8577f4ad88c3718"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_messaging_1_1_messages_hub.html#a8bc4019c06577bdcb8577f4ad88c3718">Broadcast</a> (<a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a> instance, params object[] parameters)</td></tr>
+<tr class="memdesc:a8bc4019c06577bdcb8577f4ad88c3718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast message. Pass parameters to the subscriber handlers.  <a href="#a8bc4019c06577bdcb8577f4ad88c3718">More...</a><br /></td></tr>
 <tr class="separator:a8bc4019c06577bdcb8577f4ad88c3718"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9686ecb0c2d32a2f1a72518610ed6432"><td class="memItemLeft" align="right" valign="top"><a id="a9686ecb0c2d32a2f1a72518610ed6432"></a>
-IDisposable&#160;</td><td class="memItemRight" valign="bottom"><b>AddHandler</b> (<a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a> descriptor, Action&lt; object[]&gt; handler)</td></tr>
+<tr class="memitem:a9686ecb0c2d32a2f1a72518610ed6432"><td class="memItemLeft" align="right" valign="top">IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_messaging_1_1_messages_hub.html#a9686ecb0c2d32a2f1a72518610ed6432">AddHandler</a> (<a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a> descriptor, Action&lt; object[]&gt; handler)</td></tr>
+<tr class="memdesc:a9686ecb0c2d32a2f1a72518610ed6432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to the message.  <a href="#a9686ecb0c2d32a2f1a72518610ed6432">More...</a><br /></td></tr>
 <tr class="separator:a9686ecb0c2d32a2f1a72518610ed6432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -117,7 +119,84 @@ Properties</h2></td></tr>
 <tr class="separator:aa99d8f5b3b6a443ae9c8a3816900dfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"></div><h2 class="groupheader">Property Documentation</h2>
+<div class="textblock"><p>Messages Hub. Provide interaction beetwen subscribers and broadcasters. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9686ecb0c2d32a2f1a72518610ed6432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9686ecb0c2d32a2f1a72518610ed6432">&sect;&nbsp;</a></span>AddHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDisposable Vdev.Messaging.MessagesHub.AddHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a>&#160;</td>
+          <td class="paramname"><em>descriptor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; object[]&gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscribe to the message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td><a class="el" href="class_vdev_1_1_messaging_1_1_message.html" title="Base class for messages with three parameters. ">Message</a> instance. Same instance must be used for the broadcasting (through <a class="el" href="class_vdev_1_1_messaging_1_1_messages_hub.html#a8bc4019c06577bdcb8577f4ad88c3718">Broadcast</a>)</td></tr>
+    <tr><td class="paramname">handler</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a8bc4019c06577bdcb8577f4ad88c3718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc4019c06577bdcb8577f4ad88c3718">&sect;&nbsp;</a></span>Broadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Messaging.MessagesHub.Broadcast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_vdev_1_1_messaging_1_1_messages_hub_1_1_i_message_descriptor.html">IMessageDescriptor</a>&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object []&#160;</td>
+          <td class="paramname"><em>parameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Broadcast message. Pass parameters to the subscriber handlers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instance</td><td><a class="el" href="class_vdev_1_1_messaging_1_1_message.html" title="Base class for messages with three parameters. ">Message</a> instance. Same instance must be used for subscription (through Subscribe).</td></tr>
+    <tr><td class="paramname">parameters</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
 <a id="aa99d8f5b3b6a443ae9c8a3816900dfeb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa99d8f5b3b6a443ae9c8a3816900dfeb">&sect;&nbsp;</a></span>DefaultInstance</h2>
 

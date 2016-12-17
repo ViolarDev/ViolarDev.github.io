@@ -100,22 +100,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa47d677b1304fd86281733299f6ec31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new operation source. Operation that created using this constructor must be binded to the processor <a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">Vdev.Async.AsyncProcessor</a> prior it can be used. var op = new <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#afa47d677b1304fd86281733299f6ec31" title="Create new operation source. Operation that created using this constructor must be binded to the proc...">AsyncOpSource&lt;&gt;()</a>; is not the same var op = new AsyncOpSource&lt;&gt; (null);  <a href="#afa47d677b1304fd86281733299f6ec31">More...</a><br /></td></tr>
 <tr class="separator:afa47d677b1304fd86281733299f6ec31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ef6b5158920392b26e6e7d90893323e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a8ef6b5158920392b26e6e7d90893323e">AsyncOpSource</a> (<a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> processor)</td></tr>
-<tr class="memdesc:a8ef6b5158920392b26e6e7d90893323e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create bew operation source and bind it to the processor.  <a href="#a8ef6b5158920392b26e6e7d90893323e">More...</a><br /></td></tr>
+<tr class="memdesc:a8ef6b5158920392b26e6e7d90893323e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new operation source and bind it to the processor.  <a href="#a8ef6b5158920392b26e6e7d90893323e">More...</a><br /></td></tr>
 <tr class="separator:a8ef6b5158920392b26e6e7d90893323e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d83c002b81bb184f78d98c9467492f0"><td class="memItemLeft" align="right" valign="top"><a id="a8d83c002b81bb184f78d98c9467492f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BindToProcessor</b> (<a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> processor)</td></tr>
+<tr class="memitem:a8d83c002b81bb184f78d98c9467492f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a8d83c002b81bb184f78d98c9467492f0">BindToProcessor</a> (<a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a> processor)</td></tr>
+<tr class="memdesc:a8d83c002b81bb184f78d98c9467492f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prior to using <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#aca5475beced0457d16ac0aa56a895d20">Op</a> or <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a90e338172a30391b5dcdbeaac56b2f0b">SetResult</a> / SetException OpSource must be binded to the processor. Its like operation starting.  <a href="#a8d83c002b81bb184f78d98c9467492f0">More...</a><br /></td></tr>
 <tr class="separator:a8d83c002b81bb184f78d98c9467492f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90e338172a30391b5dcdbeaac56b2f0b"><td class="memItemLeft" align="right" valign="top"><a id="a90e338172a30391b5dcdbeaac56b2f0b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetResult</b> (R result)</td></tr>
+<tr class="memitem:a90e338172a30391b5dcdbeaac56b2f0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a90e338172a30391b5dcdbeaac56b2f0b">SetResult</a> (R result)</td></tr>
+<tr class="memdesc:a90e338172a30391b5dcdbeaac56b2f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize operation with result. After calling SetResult operation going to the Finished state.  <a href="#a90e338172a30391b5dcdbeaac56b2f0b">More...</a><br /></td></tr>
 <tr class="separator:a90e338172a30391b5dcdbeaac56b2f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2907dfe62be127df64f6137daad7265"><td class="memItemLeft" align="right" valign="top"><a id="ad2907dfe62be127df64f6137daad7265"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetException&lt; E &gt;</b> (E exception)</td></tr>
+<tr class="memitem:ad2907dfe62be127df64f6137daad7265"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#ad2907dfe62be127df64f6137daad7265">SetException&lt; E &gt;</a> (E exception)</td></tr>
+<tr class="memdesc:ad2907dfe62be127df64f6137daad7265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize operation with exception. After calling SetResult operation going to the Finished state.  <a href="#ad2907dfe62be127df64f6137daad7265">More...</a><br /></td></tr>
 <tr class="separator:ad2907dfe62be127df64f6137daad7265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:aca5475beced0457d16ac0aa56a895d20"><td class="memItemLeft" align="right" valign="top"><a id="aca5475beced0457d16ac0aa56a895d20"></a>
-<a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">IAsyncOp</a>&lt; R &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Op</b><code> [get]</code></td></tr>
+<tr class="memitem:aca5475beced0457d16ac0aa56a895d20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">IAsyncOp</a>&lt; R &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#aca5475beced0457d16ac0aa56a895d20">Op</a><code> [get]</code></td></tr>
+<tr class="memdesc:aca5475beced0457d16ac0aa56a895d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to the underlying operation. Prior using it (for awaiting for example) host <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html">AsyncOpSource</a> must be binded to the Processor by calling <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a8d83c002b81bb184f78d98c9467492f0">BindToProcessor</a> (if source created by constructor without parameters).  <a href="#aca5475beced0457d16ac0aa56a895d20">More...</a><br /></td></tr>
 <tr class="separator:aca5475beced0457d16ac0aa56a895d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -161,10 +161,152 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create bew operation source and bind it to the processor. </p>
+<p>Create new operation source and bind it to the processor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">processor</td><td>if null specified default processor was used</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8d83c002b81bb184f78d98c9467492f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d83c002b81bb184f78d98c9467492f0">&sect;&nbsp;</a></span>BindToProcessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html">Vdev.Async.AsyncOpSource</a>&lt; R &gt;.BindToProcessor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vdev_1_1_async_1_1_async_processor.html">AsyncProcessor</a>&#160;</td>
+          <td class="paramname"><em>processor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prior to using <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#aca5475beced0457d16ac0aa56a895d20">Op</a> or <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a90e338172a30391b5dcdbeaac56b2f0b">SetResult</a> / SetException OpSource must be binded to the processor. Its like operation starting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processor</td><td>Processor where operation initially 'started'</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown if operation already binded to the processor</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad2907dfe62be127df64f6137daad7265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2907dfe62be127df64f6137daad7265">&sect;&nbsp;</a></span>SetException< E >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html">Vdev.Async.AsyncOpSource</a>&lt; R &gt;.SetException&lt; E &gt; </td>
+          <td>(</td>
+          <td class="paramtype">E&#160;</td>
+          <td class="paramname"><em>exception</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finalize operation with exception. After calling SetResult operation going to the Finished state. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">E</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exception</td><td>Exception</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown if operation is not started or result already set</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>E</em></td><td>&#160;:</td><td valign="top"><em>Exception</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a90e338172a30391b5dcdbeaac56b2f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e338172a30391b5dcdbeaac56b2f0b">&sect;&nbsp;</a></span>SetResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html">Vdev.Async.AsyncOpSource</a>&lt; R &gt;.SetResult </td>
+          <td>(</td>
+          <td class="paramtype">R&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finalize operation with result. After calling SetResult operation going to the Finished state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>Operation result</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown if operation is not started or result already set</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="aca5475beced0457d16ac0aa56a895d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5475beced0457d16ac0aa56a895d20">&sect;&nbsp;</a></span>Op</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_vdev_1_1_async_1_1_i_async_op.html">IAsyncOp</a>&lt;R&gt; <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html">Vdev.Async.AsyncOpSource</a>&lt; R &gt;.Op</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access to the underlying operation. Prior using it (for awaiting for example) host <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html">AsyncOpSource</a> must be binded to the Processor by calling <a class="el" href="class_vdev_1_1_async_1_1_async_op_source.html#a8d83c002b81bb184f78d98c9467492f0">BindToProcessor</a> (if source created by constructor without parameters). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>If Operations not binded to processor yet.</td></tr>
   </table>
   </dd>
 </dl>

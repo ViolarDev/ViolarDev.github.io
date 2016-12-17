@@ -90,28 +90,177 @@ $(document).ready(function(){initNavTree('class_vdev_1_1_threads_1_1_operation_c
 <div class="title">Vdev.Threads.OperationCancellationSource Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Source for <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a>. Can be obtained through <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a14ac9a1d965c6b591746d467f94ea199">Cancellation</a> property.  
+ <a href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1440ac3c77dabb00b6c2f6129d8d0380"><td class="memItemLeft" align="right" valign="top"><a id="a1440ac3c77dabb00b6c2f6129d8d0380"></a>
-IDisposable&#160;</td><td class="memItemRight" valign="bottom"><b>SubscribeToCancellation</b> (Action handler)</td></tr>
+<tr class="memitem:a35b97a34921ba796a41c6bd66e1cc14a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a35b97a34921ba796a41c6bd66e1cc14a">OperationCancellationSource</a> ()</td></tr>
+<tr class="memdesc:a35b97a34921ba796a41c6bd66e1cc14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a35b97a34921ba796a41c6bd66e1cc14a">More...</a><br /></td></tr>
+<tr class="separator:a35b97a34921ba796a41c6bd66e1cc14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1440ac3c77dabb00b6c2f6129d8d0380"><td class="memItemLeft" align="right" valign="top">IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a1440ac3c77dabb00b6c2f6129d8d0380">SubscribeToCancellation</a> (Action handler)</td></tr>
+<tr class="memdesc:a1440ac3c77dabb00b6c2f6129d8d0380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler will be called when state changed to canceled or immediately if operation already canceled.  <a href="#a1440ac3c77dabb00b6c2f6129d8d0380">More...</a><br /></td></tr>
 <tr class="separator:a1440ac3c77dabb00b6c2f6129d8d0380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dc889f991be3a409266482ac3b8ee2a"><td class="memItemLeft" align="right" valign="top"><a id="a3dc889f991be3a409266482ac3b8ee2a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TryCancel</b> ()</td></tr>
+<tr class="memitem:a3dc889f991be3a409266482ac3b8ee2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a3dc889f991be3a409266482ac3b8ee2a">TryCancel</a> ()</td></tr>
+<tr class="memdesc:a3dc889f991be3a409266482ac3b8ee2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel operation if it is not yet cancelled in other case do nothing.  <a href="#a3dc889f991be3a409266482ac3b8ee2a">More...</a><br /></td></tr>
 <tr class="separator:a3dc889f991be3a409266482ac3b8ee2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15bb46d2d40f3811ddc5e5085023cee8"><td class="memItemLeft" align="right" valign="top"><a id="a15bb46d2d40f3811ddc5e5085023cee8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Cancel</b> ()</td></tr>
+<tr class="memitem:a15bb46d2d40f3811ddc5e5085023cee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a15bb46d2d40f3811ddc5e5085023cee8">Cancel</a> ()</td></tr>
+<tr class="memdesc:a15bb46d2d40f3811ddc5e5085023cee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel operation if it is not yet cancelled in other case exeception will be throwed.  <a href="#a15bb46d2d40f3811ddc5e5085023cee8">More...</a><br /></td></tr>
 <tr class="separator:a15bb46d2d40f3811ddc5e5085023cee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a137df87fe38999df4f1969480fd6fb30"><td class="memItemLeft" align="right" valign="top"><a id="a137df87fe38999df4f1969480fd6fb30"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Canceled</b><code> [get]</code></td></tr>
+<tr class="memitem:a137df87fe38999df4f1969480fd6fb30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a137df87fe38999df4f1969480fd6fb30">Canceled</a><code> [get]</code></td></tr>
+<tr class="memdesc:a137df87fe38999df4f1969480fd6fb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if ther operation already cancelled by calling <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a15bb46d2d40f3811ddc5e5085023cee8">Cancel</a> or .  <a href="#a137df87fe38999df4f1969480fd6fb30">More...</a><br /></td></tr>
 <tr class="separator:a137df87fe38999df4f1969480fd6fb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14ac9a1d965c6b591746d467f94ea199"><td class="memItemLeft" align="right" valign="top"><a id="a14ac9a1d965c6b591746d467f94ea199"></a>
-<a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cancellation</b><code> [get]</code></td></tr>
+<tr class="memitem:a14ac9a1d965c6b591746d467f94ea199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a14ac9a1d965c6b591746d467f94ea199">Cancellation</a><code> [get]</code></td></tr>
+<tr class="memdesc:a14ac9a1d965c6b591746d467f94ea199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain  assigned with this source.  <a href="#a14ac9a1d965c6b591746d467f94ea199">More...</a><br /></td></tr>
 <tr class="separator:a14ac9a1d965c6b591746d467f94ea199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Source for <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a>. Can be obtained through <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a14ac9a1d965c6b591746d467f94ea199">Cancellation</a> property. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a35b97a34921ba796a41c6bd66e1cc14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b97a34921ba796a41c6bd66e1cc14a">&sect;&nbsp;</a></span>OperationCancellationSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vdev.Threads.OperationCancellationSource.OperationCancellationSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a15bb46d2d40f3811ddc5e5085023cee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15bb46d2d40f3811ddc5e5085023cee8">&sect;&nbsp;</a></span>Cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Threads.OperationCancellationSource.Cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancel operation if it is not yet cancelled in other case exeception will be throwed. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>If operation already cancelled.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1440ac3c77dabb00b6c2f6129d8d0380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1440ac3c77dabb00b6c2f6129d8d0380">&sect;&nbsp;</a></span>SubscribeToCancellation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDisposable Vdev.Threads.OperationCancellationSource.SubscribeToCancellation </td>
+          <td>(</td>
+          <td class="paramtype">Action&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handler will be called when state changed to canceled or immediately if operation already canceled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Object that allows to unsubscribe from cancellation subscription.</dd></dl>
+
+</div>
+</div>
+<a id="a3dc889f991be3a409266482ac3b8ee2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc889f991be3a409266482ac3b8ee2a">&sect;&nbsp;</a></span>TryCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Threads.OperationCancellationSource.TryCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancel operation if it is not yet cancelled in other case do nothing. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a137df87fe38999df4f1969480fd6fb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137df87fe38999df4f1969480fd6fb30">&sect;&nbsp;</a></span>Canceled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vdev.Threads.OperationCancellationSource.Canceled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if ther operation already cancelled by calling <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html#a15bb46d2d40f3811ddc5e5085023cee8">Cancel</a> or . </p>
+
+</div>
+</div>
+<a id="a14ac9a1d965c6b591746d467f94ea199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ac9a1d965c6b591746d467f94ea199">&sect;&nbsp;</a></span>Cancellation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a> Vdev.Threads.OperationCancellationSource.Cancellation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain  assigned with this source. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>OperationCancellation.cs</li>
 </ul>

@@ -8,5 +8,8 @@ var class_vdev_1_1_cryptography_1_1_a_e_s_helper =
     [ "EncryptStringToBase64String", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#abe67ed46d65e89f0a6713ac605b0aece", null ],
     [ "EncryptStringToBytes", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#af653ef2f29fee780ab7abe7d10a97959", null ],
     [ "EncryptToBase64String", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#a5854195d140abbe481c6904ed4ab6d05", null ],
-    [ "EncryptToBytes", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#a5c86c8e073b2d59a76f0ebf9977262dd", null ]
+    [ "EncryptToBytes", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#a5c86c8e073b2d59a76f0ebf9977262dd", null ],
+    [ "FromPassword", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#ad0412096431c2867e485580007f011ed", null ],
+    [ "GeneratePasswordKey", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#ad5868ad7e75cab355a466abff2de4af2", null ],
+    [ "HexStr2Bytes", "class_vdev_1_1_cryptography_1_1_a_e_s_helper.html#aebcc60e59fb163a09e02bab9c04be438", null ]
 ];

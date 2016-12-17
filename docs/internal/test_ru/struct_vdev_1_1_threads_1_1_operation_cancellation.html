@@ -91,14 +91,17 @@ $(document).ready(function(){initNavTree('struct_vdev_1_1_threads_1_1_operation_
 <div class="title">Vdev.Threads.OperationCancellation Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Provide way to cancel operation. Invoker obtain <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html" title="Provide way to cancel operation. Invoker obtain OperationCancellation from OperationCancellationSourc...">OperationCancellation</a> from <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html">OperationCancellationSource</a> instance. Task executor must check <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#a762ddc45a65e997d43075fd286d6d645">Canceled</a> or use <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#acc89861e933e79554c4668dd1f777461">ThrowIfCanceled()</a> to break execution sequence.  
+ <a href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb9eef0dfbe28b821c3357e2a56e3c99"><td class="memItemLeft" align="right" valign="top"><a id="aeb9eef0dfbe28b821c3357e2a56e3c99"></a>
-IDisposable&#160;</td><td class="memItemRight" valign="bottom"><b>SubscribeToCancellation</b> (Action handler)</td></tr>
+<tr class="memitem:aeb9eef0dfbe28b821c3357e2a56e3c99"><td class="memItemLeft" align="right" valign="top">IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#aeb9eef0dfbe28b821c3357e2a56e3c99">SubscribeToCancellation</a> (Action handler)</td></tr>
+<tr class="memdesc:aeb9eef0dfbe28b821c3357e2a56e3c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler will be called when state changed to canceled or immediately if operation already canceled.  <a href="#aeb9eef0dfbe28b821c3357e2a56e3c99">More...</a><br /></td></tr>
 <tr class="separator:aeb9eef0dfbe28b821c3357e2a56e3c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc89861e933e79554c4668dd1f777461"><td class="memItemLeft" align="right" valign="top"><a id="acc89861e933e79554c4668dd1f777461"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ThrowIfCanceled</b> (string message=&quot;&quot;)</td></tr>
+<tr class="memitem:acc89861e933e79554c4668dd1f777461"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#acc89861e933e79554c4668dd1f777461">ThrowIfCanceled</a> (string message=&quot;&quot;)</td></tr>
+<tr class="memdesc:acc89861e933e79554c4668dd1f777461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw exception if canceled.  <a href="#acc89861e933e79554c4668dd1f777461">More...</a><br /></td></tr>
 <tr class="separator:acc89861e933e79554c4668dd1f777461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a4e5a671da18ac823b85a4bcd4658c"><td class="memItemLeft" align="right" valign="top"><a id="a04a4e5a671da18ac823b85a4bcd4658c"></a>
 override bool&#160;</td><td class="memItemRight" valign="bottom"><b>Equals</b> (object obj)</td></tr>
@@ -115,13 +118,124 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a762ddc45a65e997d43075fd286d6d645"><td class="memItemLeft" align="right" valign="top"><a id="a762ddc45a65e997d43075fd286d6d645"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Canceled</b><code> [get]</code></td></tr>
+<tr class="memitem:a762ddc45a65e997d43075fd286d6d645"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#a762ddc45a65e997d43075fd286d6d645">Canceled</a><code> [get]</code></td></tr>
+<tr class="memdesc:a762ddc45a65e997d43075fd286d6d645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if operation was canceled.  <a href="#a762ddc45a65e997d43075fd286d6d645">More...</a><br /></td></tr>
 <tr class="separator:a762ddc45a65e997d43075fd286d6d645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedf5a34a7ca9b5035e39b8c057b65058"><td class="memItemLeft" align="right" valign="top"><a id="aedf5a34a7ca9b5035e39b8c057b65058"></a>
-static <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>None</b><code> [get]</code></td></tr>
+<tr class="memitem:aedf5a34a7ca9b5035e39b8c057b65058"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#aedf5a34a7ca9b5035e39b8c057b65058">None</a><code> [get]</code></td></tr>
+<tr class="memdesc:aedf5a34a7ca9b5035e39b8c057b65058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns default cancellation that must be never canceled.  <a href="#aedf5a34a7ca9b5035e39b8c057b65058">More...</a><br /></td></tr>
 <tr class="separator:aedf5a34a7ca9b5035e39b8c057b65058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provide way to cancel operation. Invoker obtain <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html" title="Provide way to cancel operation. Invoker obtain OperationCancellation from OperationCancellationSourc...">OperationCancellation</a> from <a class="el" href="class_vdev_1_1_threads_1_1_operation_cancellation_source.html">OperationCancellationSource</a> instance. Task executor must check <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#a762ddc45a65e997d43075fd286d6d645">Canceled</a> or use <a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html#acc89861e933e79554c4668dd1f777461">ThrowIfCanceled()</a> to break execution sequence. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeb9eef0dfbe28b821c3357e2a56e3c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9eef0dfbe28b821c3357e2a56e3c99">&sect;&nbsp;</a></span>SubscribeToCancellation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDisposable Vdev.Threads.OperationCancellation.SubscribeToCancellation </td>
+          <td>(</td>
+          <td class="paramtype">Action&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handler will be called when state changed to canceled or immediately if operation already canceled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>Handler</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Object that allows to unsubscribe from cancellation subscription.</dd></dl>
+
+</div>
+</div>
+<a id="acc89861e933e79554c4668dd1f777461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc89861e933e79554c4668dd1f777461">&sect;&nbsp;</a></span>ThrowIfCanceled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vdev.Threads.OperationCancellation.ThrowIfCanceled </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>message</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Throw exception if canceled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">OperationCanceledException</td><td>If state is 'canceled'</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a762ddc45a65e997d43075fd286d6d645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762ddc45a65e997d43075fd286d6d645">&sect;&nbsp;</a></span>Canceled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vdev.Threads.OperationCancellation.Canceled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if operation was canceled. </p>
+
+</div>
+</div>
+<a id="aedf5a34a7ca9b5035e39b8c057b65058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf5a34a7ca9b5035e39b8c057b65058">&sect;&nbsp;</a></span>None</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vdev_1_1_threads_1_1_operation_cancellation.html">OperationCancellation</a> Vdev.Threads.OperationCancellation.None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns default cancellation that must be never canceled. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>OperationCancellation.cs</li>
 </ul>
